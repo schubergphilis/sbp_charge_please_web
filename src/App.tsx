@@ -1,4 +1,5 @@
 import { ThemeProvider } from 'styled-components'
+import AppBox from './components/AppBox'
 import Footer from './components/Footer'
 import Header from './components/Header'
 import InfoBox from './components/InfoBox'
@@ -23,6 +24,7 @@ const App = () => {
 			<Navigation />
 			<Header />
 			<InfoBox />
+			<AppBox />
 			<Footer />
 		</ThemeProvider>
 	)
