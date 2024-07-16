@@ -1,30 +1,39 @@
-# React + TypeScript + Vite
+# Charge Please WebApp
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repository is created for the **Charge Please App** landingpage. If personnel working at Schuberg Philis or visitors want charge in front of our building they need to scan the QR codes on the Charge Poles. Colleagues that have the **Charge Please App** installed on their mobile device will be directly redirected and a charge session will start. If they don't have the app install this Instruction website will be shown to be able to charge their car.
 
-Currently, two official plugins are available:
+## Technical information
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The website is created using **ViteJS** and uses ReactJS together with Typescript.
+Running the Webapp on your local machine needs some software packages.
 
-## Expanding the ESLint configuration
+- NodeJS
+- Yarn
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+For OSX they can be installed using **HomeBrew**
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```bash
+brew upgrade
+brew install node
+brew install yarn
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Run development
+
+Running this repository on your localmachine run these commands.
+
+```bash
+yarn install
+yarn dev
+```
+
+## Build production
+
+Build this repository for production run these commands.
+
+```bash
+yarn install
+yarn build
+```
+
+A **dist** folder will be created which will entail all static data that can be pushed towards an S3 Bucket or whatever static file system you want.
