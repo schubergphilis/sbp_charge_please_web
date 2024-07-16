@@ -1,0 +1,28 @@
+name: Build and deploy
+run-name: Build and deploy website
+on: 
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build_and_test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'yarn'
+      - run: yarn install
+      - run: build
+      - name: Deploy GitHub pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        #if:   ${{ github.ref == 'refs/heads/main' }}  
+        with:
+          folder: dist # The folder the action should deploy.      
