@@ -30,7 +30,7 @@ const Container = styled.div`
 const AppImage = styled.img`
 	display: block;
 	margin: auto;
-	float: right;
+	max-width: 20em;
 `
 
 export default AppBox
