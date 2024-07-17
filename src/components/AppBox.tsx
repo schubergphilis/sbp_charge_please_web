@@ -5,10 +5,16 @@ const AppBox = () => {
 		<Container>
 			<h2>The App</h2>
 			<p>
-				The Schuberg Philis 'Charge Please' app is autmatically isntalled on the mobile phones of all Schuberg Philis Colleagues. If you are a colleague and you do not have the 'Charge Please' app installed, contact the GtG team to have it (re-)installed. 
+				The Schuberg Philis 'Charge Please' app is automatically installed on the mobile phones of all Schuberg Philis
+				colleagues. If you are a colleague and you do not have the 'Charge Please' app installed, contact the GtG team
+				to have it (re-)installed.
 			</p>
 			<p>
-				More (technical) information about the app can be found on <a href="https://confluence.schubergphilis.com/display/datacenter/New+ChargePlease+App">the related Confluence page</a>.
+				More (technical) information about the app can be found on{' '}
+				<a href="https://confluence.schubergphilis.com/display/datacenter/New+ChargePlease+App" target="_blank">
+					the related Confluence page
+				</a>
+				.
 			</p>
 			<AppImage src="ios-app.png" width="100%" height="auto" />
 		</Container>
