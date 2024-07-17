@@ -9,10 +9,11 @@ import { GlobalStyles, lightTheme } from './styles/ThemeConfig'
 const App = () => {
 	const queryParams = new URLSearchParams(window.location.search)
 	const session = queryParams.get('session')
+	const poleId = session?.match(/^[a-zA-Z]{3}\d{3}$/gim)?.[0].toUpperCase()
 
-	if (session) {
-		window.sessionStorage.setItem('session', session)
-		window.location.href = `sbpcharge://session/${session}`
+	if (poleId) {
+		window.sessionStorage.setItem('session', poleId)
+		window.location.href = `sbpcharge://session/${poleId}`
 		setTimeout(() => {
 			window.location.href = '?'
 		}, 2000)
