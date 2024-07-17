@@ -6,8 +6,7 @@ const InfoBox = () => {
 	return (
 		<Container>
 			<p>
-				Welcome at Schuberg Philis! We are glad that you are here. The charging space in front of our office is
-				available for all personel working at Schuberg Philis and their visitors.
+				Welcome at Schuberg Philis! We are glad that you are here. The charging spaces at our offices are available for all our Schuberg Philis colleagues and our visitors.
 			</p>
 			<p>
 				<b>If you are visitor at Schuberg Philis:</b>
@@ -26,9 +25,14 @@ const InfoBox = () => {
 						<span>
 							(starting with <b>AMS00x</b>)
 						</span>
-					) : null}
+					) : (
+						<span>
+							({session})
+						</span>
+					)
+					}
 				</li>
-				<li>Tell the reception you want to charge your car</li>
+				<li>Tell the reception or the person you are visiting that you want to charge your car, they can start the session for you</li>
 			</ul>
 		</Container>
 	)
