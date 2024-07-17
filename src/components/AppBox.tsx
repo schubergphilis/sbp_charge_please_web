@@ -5,8 +5,10 @@ const AppBox = () => {
 		<Container>
 			<h2>The App</h2>
 			<p>
-				All Schuberg Philis personnel we automatically have the app pushed towards their mobile devices. When you don't
-				have the app installed yet? Please contact CorpIT for more information.
+				The Schuberg Philis 'Charge Please' app is autmatically isntalled on the mobile phones of all Schuberg Philis Colleagues. If you are a colleague and you do not have the Charge Please app installed, contact the GtG team to have it (re-)installed. 
+			</p>
+			<p>
+				More (technical) information about the app can be found on <a href="https://confluence.schubergphilis.com/display/datacenter/New+ChargePlease+App">the related Confluence page</a>.
 			</p>
 			<AppImage src="ios-app.png" width="100%" height="auto" />
 		</Container>
