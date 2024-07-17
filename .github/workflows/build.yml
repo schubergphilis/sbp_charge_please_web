@@ -23,6 +23,6 @@ jobs:
       - run: yarn build
       - name: Deploy GitHub pages
         uses: JamesIves/github-pages-deploy-action@v4
-        #if:   ${{ github.ref == 'refs/heads/main' }}  
+        if:   ${{ github.ref == 'refs/heads/main' }}  
         with:
           folder: dist # The folder the action should deploy.      
