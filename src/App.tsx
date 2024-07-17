@@ -11,10 +11,10 @@ const App = () => {
 	const session = queryParams.get('session')
 
 	if (session) {
-		console.log(session)
+		window.sessionStorage.setItem('session', session)
 		window.location.href = `sbpcharge://session/${session}`
 		setTimeout(() => {
-			window.location.href = '/'
+			window.location.href = '?'
 		}, 2000)
 	}
 

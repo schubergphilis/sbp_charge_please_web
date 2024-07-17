@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 
 const InfoBox = () => {
+	const session = window.sessionStorage.getItem('session')
+
 	return (
 		<Container>
 			<p>
@@ -11,12 +13,20 @@ const InfoBox = () => {
 				<b>If you are visitor at Schuberg Philis:</b>
 			</p>
 			<ul>
-				<li>Connect your car to a charge pole</li>
+				{session ? (
+					<li>
+						Connect your car to charge pole <b>{session}</b>
+					</li>
+				) : (
+					<li>Connect your car to a charge pole</li>
+				)}
 				<li>
-					Remember the charge pole number
-					<span>
-						(starting with <b>AMS00x</b>)
-					</span>
+					Remember the charge pole id&nbsp;
+					{!session ? (
+						<span>
+							(starting with <b>AMS00x</b>)
+						</span>
+					) : null}
 				</li>
 				<li>Tell the reception you want to charge your car</li>
 			</ul>
