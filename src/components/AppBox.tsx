@@ -8,7 +8,7 @@ const AppBox = () => {
 				All Schuberg Philis personnel we automatically have the app pushed towards their mobile devices. When you don't
 				have the app installed yet? Please contact CorpIT for more information.
 			</p>
-			<AppImage src="/ios-app.png" width="100%" height="auto" />
+			<AppImage src="ios-app.png" width="100%" height="auto" />
 		</Container>
 	)
 }
