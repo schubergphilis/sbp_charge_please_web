@@ -1,5 +1,5 @@
-name: Build and deploy
-run-name: Build and deploy website
+name: Yarn Build 
+run-name: Yarn Build
 on: 
   push:
     branches:
@@ -9,7 +9,7 @@ on:
       - main
 
 jobs:
-  build_and_test:
+  build_and_commit_to_gh-pages:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -21,6 +21,12 @@ jobs:
           cache: 'yarn'
       - run: yarn install
       - run: yarn build
+      - name: Save artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: |
+            dist
       - name: Deploy GitHub pages
         uses: JamesIves/github-pages-deploy-action@v4
         if:   ${{ github.ref == 'refs/heads/main' }}  
