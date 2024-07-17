@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 const InfoBox = () => {
 	const session = window.sessionStorage.getItem('session')
+	const poleId = session?.match(/^[a-zA-Z]{3}\d{3}$/gim)?.[0].toUpperCase()
 
 	return (
 		<Container>
@@ -13,16 +14,16 @@ const InfoBox = () => {
 				<b>If you are visitor at Schuberg Philis:</b>
 			</p>
 			<ul>
-				{session ? (
+				{poleId ? (
 					<li>
-						Connect your car to charge pole <b>{session}</b>
+						Connect your car to charge pole <b>{poleId}</b>
 					</li>
 				) : (
 					<li>Connect your car to a charge pole</li>
 				)}
 				<li>
 					Remember the charge pole id&nbsp;
-					{!session ? (
+					{!poleId ? (
 						<span>
 							(starting with <b>AMS00x</b>)
 						</span>
