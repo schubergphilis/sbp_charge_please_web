@@ -28,7 +28,7 @@ const InfoBox = () => {
 						</span>
 					) : (
 						<span>
-							({session})
+							(<b>{session}</b>)
 						</span>
 					)
 					}
