@@ -140,6 +140,8 @@ Error generating stack: `+o.message+`
 `,b0=qe.a`
 	display: block;
 	height: 2em;
+	color: inherit !important;
+	border: none !important;
 `,eh=L0`
     *,
     *::before,
