@@ -4,9 +4,9 @@ import FullLogo from '../icons/FullLogo'
 const Navigation = () => {
 	return (
 		<Container>
-			<Link href="https://schubergphilis.com">
+			<HomeLink href="https://schubergphilis.com">
 				<FullLogo />
-			</Link>
+			</HomeLink>
 		</Container>
 	)
 }
@@ -28,9 +28,11 @@ const Container = styled.div`
 	);
 	overflow: hidden;
 `
-const Link = styled.a`
+const HomeLink = styled.a`
 	display: block;
 	height: 2em;
+	color: inherit !important;
+	border: none !important;
 `
 
 export default Navigation
