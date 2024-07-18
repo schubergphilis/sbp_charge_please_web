@@ -37,3 +37,19 @@ yarn build
 ```
 
 A **dist** folder will be created which will entail all static data that can be pushed towards an S3 Bucket or whatever static file system you want.
+
+## CI/CD
+
+A GitHub action workflow takes care of autmatically building the website for pull requests. When a pull request is merged (or a naughty coder commits directly to main), the workflow in `.github/workflows/build.yml` runs and performs the following steps:
+* Install node.js
+* `yarn install` (with caching)
+* `yarn build` - builds the site into directory `dist` and copies the content of deply into `dist`
+* saves the site (content of `dist`) as an artifact
+* commits the files in `dist` to the `gh-pages` branch
+
+If there is a commit to the `gh-pages` branch, the contents of this banch is picked up by GitHub pages and depploed to: https://schubergphilis.github.io/sbp_charge_please_web/
+
+## Related repos
+
+* [sbp_charge_please](https://github.com/schubergphilis/sbp_charge_please) - Source code for the app (private)
+* [sbp_charge_please_api](https://github.com/schubergphilis/sbp_charge_please_api) - Source code for the backend API (private)
