@@ -65,6 +65,14 @@ export const GlobalStyles = createGlobalStyle`
         font-size: 1.25em;
     }
 
+    a {
+        border-bottom: 1px solid ${({ theme }) => theme.style.colorPrimary};
+        &:hover {
+            color: ${({ theme }) => theme.style.colorPrimary};
+            border-bottom: 1px solid ${({ theme }) => theme.style.colorPrimary};
+        }
+    }
+
     sup,
     sub {
         font-size: 0.75em;

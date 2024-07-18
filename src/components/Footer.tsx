@@ -57,6 +57,11 @@ const Card = styled.div`
 	flex-direction: column;
 	flex-wrap: wrap;
 	gap: 2em;
+
+	& a {
+		color: inherit;
+		border-bottom: none;
+	}
 `
 
 export default Footer
