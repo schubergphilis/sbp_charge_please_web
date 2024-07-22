@@ -16,7 +16,7 @@ const App = () => {
 		window.location.href = `sbpcharge://session/${poleId}`
 		setTimeout(() => {
 			window.location.href = '?'
-		}, 2000)
+		}, 250)
 	}
 
 	return (

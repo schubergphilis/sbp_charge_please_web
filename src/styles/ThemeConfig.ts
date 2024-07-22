@@ -86,6 +86,7 @@ export const GlobalStyles = createGlobalStyle`
     svg {
         display: inline-block;
         vertical-align: middle;
+        width: auto;
     }
 
 	@keyframes rotating {
