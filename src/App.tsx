@@ -14,6 +14,9 @@ const App = () => {
 	if (poleId) {
 		window.sessionStorage.setItem('session', poleId)
 		window.location.href = `sbpcharge://session/${poleId}`
+		setTimeout(() => {
+			window.location.href = '?'
+		}, 250)
 	}
 
 	return (
